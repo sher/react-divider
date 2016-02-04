@@ -1,0 +1,89 @@
+*, *:before, *:after {
+  box-sizing: inherit;
+  user-select: inherit;
+  cursor: inherit;
+}
+
+.ui-divider-overlay {
+  opacity: 0.3;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.ui-divider-overlay--vertical {
+  cursor: col-resize;
+}
+
+.ui-divider-overlay--horizontal {
+  cursor: row-resize;
+}
+
+.ui-divider-container {
+  display: flex;
+  flex-grow: 1;
+  flex-shrink: 1;
+  box-sizing: border-box;
+}
+
+.ui-divider-container--vertical {
+  flex-direction: row;
+}
+
+.ui-divider-container--horizontal {
+  flex-direction: column;
+}
+
+.ui-divider-section {
+  flex-grow: 0;
+  flex-shrink: 0;
+  overflow: scroll;
+  white-space: nowrap;
+}
+
+.ui-divider-section--greedy {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.ui-divider {
+  border-color: #ccc;
+  border-style: solid;
+}
+
+.ui-divider--vertical {
+  width: 2px;
+  min-width: 2px;
+  max-width: 2px;
+  border-left-width: 1px;
+  border-right-width: 1px;
+}
+
+.ui-divider--horizontal {
+  height: 2px;
+  min-height: 2px;
+  max-height: 2px;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+}
+
+.ui-divider--resizable {
+  z-index: 1;
+  transition: border-color 0.15s;
+}
+
+.ui-divider--resizable:hover, .ui-divider--resizable:active {
+  border-color: #333;
+  background-color: #333;
+}
+
+.ui-divider--resizable.ui-divider--vertical:hover {
+  cursor: col-resize;
+}
+
+.ui-divider--resizable.ui-divider--horizontal:hover {
+  cursor: row-resize;
+}

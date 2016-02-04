@@ -1,0 +1,36 @@
+{
+  "name": "react-divider",
+  "version": "0.1.0",
+  "description": "Resizable view divider for React",
+  "main": "lib/react-divider.js",
+  "scripts": {
+    "clean": "rm -rf lib dist",
+    "build:lib": "babel src --out-dir lib",
+    "build:umd": "cross-env NODE_ENV=development webpack src/react-divider.jsx dist/react-divider.js",
+    "build:umd:min": "cross-env NODE_ENV=production webpack src/react-divider.jsx dist/react-divider.min.js",
+    "build": "npm run clean && npm run build:lib && npm run build:umd && npm run build:umd:min"
+  },
+  "author": "Sherzod Kuchkarov",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tundrax/react-divider.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.4.5",
+    "babel-core": "^6.4.5",
+    "babel-eslint": "^4.1.8",
+    "babel-loader": "^6.2.2",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "cross-env": "^1.0.7",
+    "eslint": "^1.10.3",
+    "eslint-plugin-react": "^3.16.1",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7",
+    "webpack": "^1.12.12"
+  },
+  "dependencies": {
+    "classnames": "^2.2.3"
+  }
+}
